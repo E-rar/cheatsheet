@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheatsheet</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header><a href="../../index.html">cmd</a><a href="">git</a>
+        <h1>Cheatsheet</h1>
+    </header>
+    <nav>
+        <ul>
+            <a href="#Werkzeuge konfigurieren">
+                <li>Werkzeuge konfigurieren</li>
+            </a><a href="#Repositories anlegen">
+                <li>Repositories anlegen</li>
+            </a><a href="#Dateinamen refaktorisieren">
+                <li>Dateinamen refaktorisieren</li>
+            </a><a href="#Fragmente speichern">
+                <li>Fragmente speichern</li>
+            </a>
+            </a><a href="#Änderungen vornehmen">
+            <li>Änderungen vornehmen</li>
+            </a>
+            </a><a href="#Änderungen gruppieren">
+            <li>Änderungen gruppieren</li>
+            </a>
+            </a><a href="#Historie überprüfen">
+                <li>Historie überprüfen</li>
+            </a>
+            </a><a href="#Commits wiederholen">
+                <li>Commits wiederholen</li>
+            </a>
+            </a><a href="#Fragmente speichern">
+                <li>Fragmente speichern</li>
+            </a>
+            
+        </ul>
+    </nav>
+<main>
+    <article id="Werkzeuge konfigurieren">
+        <h2>Werkzeuge konfigurieren</h2>
+        <h4>Konfigurieren von Benutzerinformationen für alle lokalen Repositories</h4>
+        <p class="mono">$ git config --global user.name "[name]"</p>
+        <h4>Setzt den Benutzernamen, den du an deine Commit-Transaktionen hängen willst</h4>
+        <p class="mono">$ git config --global user.email "[email address]"</p>
+        <h4>Setzt die Emailadresse, die du an deine Commit-Transaktionen hängen willst</h4>
+    </article>
+    <article  id="Repositories anlegen">
+        <h2>Repositories anlegen</h2>
+        <h4>Ein neues Repository anlegen, oder eines von einer bestehenden URL herunterladen</h4>
+        <p class="mono">$ git init [project-name]</p>
+        <h4>Legt ein neues lokales Repository mit dem angegebenen Namen an</h4>
+        <p class="mono">$ git clone [url]</p>
+        <h4>Klont ein Projekt und lädt seine gesamte Versionshistorie herunter</h4>
+    </article>
+    <article  id="Dateinamen refaktorisieren">
+        <h2>Dateinamen refaktorisieren</h2>
+        <h4>Verschieben und Löschen versionierter Dateien</h4>
+        <p class="mono">$ git rm [file]</p>
+        <h4>Löscht die Datei aus dem Arbeitsverzeichnis und wird im Index zur Löschung markiert, dadurch wird die Datei beim nächsten commit aus der Versionskontrolle gelöscht</h4>
+        <p class="mono">$ git rm --cached [file]</p>
+        <h4>Entfernt die Datei aus der Versionskontrolle, behält sie jedoch lokal</h4>
+        <p class="mono">$ git mv [file-original] [file-renamed]</p>
+        <h4>Ändert den Namen der Datei und bereitet diese für den Commit vor</h4>
+        
+    </article>
+    <article  id="Fragmente speichern">
+        <h2>Fragmente speichern</h2>
+        <h4>Aufschieben und Wiederherstellen unvollständiger Änderungen</h4>
+        <p class="mono">$ git stash</p>
+        <h4>Speichert temporär alle getrackten Dateien mit Änderungen</h4>
+        <p class="mono">$ git stash pop</p>
+        <h4>Stellt die zuletzt zwischengespeicherten Dateien wieder her</h4>
+        <p class="mono">$ git stash list</p>
+        <h4>Listet alle zwischengespeicherten Änderungen auf</h4>
+        <p class="mono">$ git stash drop</p>
+        <h4>Verwirft die zuletzt zwischengespeicherten Änderungen</h4>
+    </article>
+    <article id="Änderungen vornehmen">
+        <h2>Änderungen vornehmen</h2>
+        <h4>Änderungen überprüfen und eine Commit-Transaktion anfertigen</h4>
+        <p class="mono">$ git status</p>
+        <h4>Listet alle zum Commit bereiten neuen oder geänderten Dateien auf</h4>
+        <p class="mono">$ git diff</p>
+        <h4>Zeigt noch nicht indizierte Dateiänderungen an</h4>
+        <p class="mono">$ git add [file]</p>
+        <h4>Indiziert den derzeitigen Stand der Datei für die Versionierung</h4>
+        <p class="mono">$ git diff --staged</p>
+        <h4>Zeigt die Unterschiede zwischen dem Index (“staging area”) und der aktuellen Dateiversion</h4>
+        <p class="mono">$ git reset [file]</p>
+        <h4>Nimmt die Datei vom Index, erhält jedoch ihren Inhalt</h4>
+        <p class="mono">$ git commit -m"[descriptive message]"</p>
+        <h4>Nimmt alle derzeit indizierten Dateien permanent in die Versionshistorie auf</h4>
+        
+    </article>
+    <article id="Änderungen gruppieren">
+        <h2>Änderungen gruppieren</h2>
+        <h4>Benennen von Commit-Serien und Zusammenfassen erledigter Tasks</h4>
+        <p class="mono">$ git branch</p>
+        <h4>Listet alle lokalen Branches im aktuellen Repository auf</h4>
+        <p class="mono">$ git branch [branch-name]</p>
+        <h4>Erzeugt einen neuen Branch</h4>
+        <p class="mono">$ git checkout [branch-name]</p>
+        <h4>Wechselt auf den angegebenen Branch und aktualisiert das Arbeitsverzeichnis</h4>
+        <p class="mono">$ git merge [branch-name]</p>
+        <h4>Fasst die Historie des angegeben Branches mit der des aktuell ausgecheckten Branches zusammen</h4>
+        <p class="mono">$ git branch -d [branch-name]</p>
+        <h4>Löscht den angegebenen Branch</h4>
+        
+    </article>
+    <article id="Historie überprüfen">
+        <h2>Historie überprüfen</h2>
+        <h4>Durchsuchen und Inspizieren der Entwicklung von Projektdateien</h4>
+        <p class="mono">$ git log</p>
+        <h4>Listet die Versionshistorie für den aktuellen Branch auf</h4>
+        <p class="mono">$ git log --follow [file]</p>
+        <h4>Listet die Versionshistorie für die aktuelle Datei auf, inklusive Umbenennungen</h4>
+        <p class="mono">$ git diff [first-branch]...[second-branch]</p>
+        <h4>Zeigt die inhaltlichen Unterschiede zwischen zwei Branches</h4>
+        <p class="mono">$ git show [commit]</p>
+        <h4>Gibt die Änderungen an Inhalt und Metadaten durch den angegebenen Commit aus</h4>
+        
+    </article>
+    <article id="Commits wiederholen">
+        <h2>Commits wiederholen</h2>
+        <h4>Fehler beseitigen und die Historie bereinigen</h4>
+        <p class="mono">$ git reset [commit]</p>
+        <h4>Macht alle Commits nach [commit] rückgängig, erhält die Änderungen aber lokal</h4>
+        <p class="mono">$ git reset --hard [commit]</p>
+        <h4>Verwirft die Historie und Änderungen seit dem angegebenen Commit</h4>
+    </article>
+    <article id="Änderungen synchronisieren">
+        <h2>Änderungen synchronisieren</h2>
+        <h4>Registrieren eines externen Repositories (URL) und Tauschen der Repository-Historie</h4>
+        <p class="mono">$ git fetch [remote]</p>
+        <h4>Lädt die gesamte Historie eines externen Repositories herunter</h4>
+        <p class="mono">$ git merge [remote]/[branch]</p>
+        <h4>Integriert den externen Branch in den aktuell lokal ausgecheckten Branch</h4>
+        <p class="mono">$ git push [remote] [branch]</p>
+        <h4>Pusht alle Commits auf dem lokalen Branch zu GitHub</h4>
+        <p class="mono">$ git pull</p>
+        <h4>Pullt die Historie vom externen Repository und integriert die Änderungen</h4>
+        
+    </article>
+
+    
+</main>
+</body>
+</html>
